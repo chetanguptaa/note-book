@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/backend": "^0.29.2",
     "@clerk/nextjs": "^4.24.1",
     "@neondatabase/serverless": "^0.6.0",
     "@radix-ui/react-dialog": "^1.0.4",
