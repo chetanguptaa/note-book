@@ -7,11 +7,11 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: "notebook-ai-ee9e0.firebaseapp.com",
-  projectId: "notebook-ai-ee9e0",
-  storageBucket: "notebook-ai-ee9e0.appspot.com",
-  messagingSenderId: "934663664535",
-  appId: "1:934663664535:web:57338fcfa97728f10acad2",
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.APPID,
 };
 
 // Initialize Firebase
@@ -24,6 +24,8 @@ export async function uploadFileToFirebase(image_url: string, name: string) {
     const buffer = await response.arrayBuffer();
     const file_name = name.replace(" ", "") + Date.now + ".jpeg";
     const storageRef = ref(storage, file_name);
+    console.log("heloo");
+
     await uploadBytes(storageRef, buffer, {
       contentType: "image/jpeg",
     });
