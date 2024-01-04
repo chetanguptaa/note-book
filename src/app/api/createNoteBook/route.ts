@@ -8,6 +8,8 @@ export const runtime = "edge";
 
 export async function POST(req: Request) {
   const { userId } = auth();
+  console.log(userId);
+
   if (!userId) {
     return new NextResponse("unauthorized", {
       status: 401,

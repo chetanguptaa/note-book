@@ -1,17 +1,23 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.AUTHDOMAIN,
-  projectId: process.env.PROJECTID,
-  storageBucket: process.env.STORAGEBUCKET,
-  messagingSenderId: process.env.MESSAGINGSENDERID,
-  appId: process.env.APPID,
+	apiKey: "AIzaSyAMHaRmUdobmV_nxN6c_Er78ttGyj3-XaA",
+
+  authDomain: "notebook-ai-74f5c.firebaseapp.com",
+
+  projectId: "notebook-ai-74f5c",
+
+  storageBucket: "notebook-ai-74f5c.appspot.com",
+
+  messagingSenderId: "1079759702553",
+
+  appId: "1:1079759702553:web:eedc0bad231f7913ef3888"
+
 };
 
 // Initialize Firebase
